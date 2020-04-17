@@ -17,6 +17,8 @@ http://3.84.152.120/
 
 https://tyoadhi.s3.amazonaws.com/logo+undip.png
 
-#URL EC2 FORM SURVEY
+#URL ELASTIC BEAN FORM SURVEY
+
+http://rsbkuts-fitra.us-east-1.elasticbeanstalk.com/
 
 

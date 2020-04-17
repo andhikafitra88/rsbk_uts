@@ -5,7 +5,7 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
     <h:head>
-        <title>Survei Siswa</title>
+        <title>Formulir Survei</title>
         <h:outputStylesheet name="assets/css/style.css" />
         <h:outputStylesheet name="assets/css/bootstrap.min.css" />
         <style>
@@ -42,52 +42,52 @@
                 <div class="signup-content" style="justify-content: center">
                     <div class="signup-form">
                         <center>
-                        <h2 class="form-title">Survey Siswa</h2>
+                        <h1 class="form-title">Form Survei Mahasiswa</h1>
                         </center>
                         <h:form>
                             <div class="form-group">
-                                <h:inputText label="NamaDepan" 
+                                Nama Lengkap :<h:inputText label="NamaDepan" 
                        id="NamaDepan" value="#{employeeBean.namaDepan}" 
-                       required="true" a:placeholder="Nama Depan"/>
+                       required="true" a:placeholder="Nama Lengkap"/>
                          <h:message for="NamaDepan" style="color: red"/>
                             </div>
                             <div class="form-group">
-                                <h:inputText label="NamaBelakang" 
+                                Nama Panggilan :<h:inputText label="NamaBelakang" 
 			                       id="NamaBelakang" value="#{employeeBean.namaBelakang}" 
 			                       required="true"
-			                       a:placeholder="Nama Belakang"/>
+			                       a:placeholder="Nama Lengkap"/>
 			                    <h:message for="NamaBelakang" style="color: red"/>
                             </div>
                             <div class="form-group">
-                                <h:inputText label="Address"
+                                Alamat Tempat Tinggal :<h:inputText label="Address"
 			                       id="address" value="#{employeeBean.address}"
 			                       required="true"
 			                       a:placeholder="Alamat"/>
 					            <h:message for="address" style="color: red"/>
                             </div>
                             <div class="form-group">
-                                <h:inputText label="Kota" 
+                                Kota / Kabupaten :<h:inputText label="Kota / Kabupaten" 
 			                       id="Kota" value="#{employeeBean.kota}" 
 			                       required="true"
 			                       a:placeholder="Kota"/>
 		                       <h:message for="Kota" style="color: red"/>
                             </div>
                             <div class="form-group">
-                                <h:inputText label="Negara" 
+                                Provinsi :<h:inputText label="Negara" 
 			                       id="Negara" value="#{employeeBean.negara}" 
 			                       required="true"
-			                       a:placeholder="Negara"/>
+			                       a:placeholder="Provinsi"/>
 			                    <h:message for="Negara" style="color: red"/>
                             </div>
                             <div class="form-group">
-                                <h:inputText label="Pos" 
+                                Kode Pos :<h:inputText label="Pos" 
 			                       id="Pos" type="number" value="#{employeeBean.pos}" 
 			                       required="true"
 			                       a:placeholder="Kode Pos"/>
 			                    <h:message for="Pos" style="color: red"/>
                             </div>
                             <div class="form-group">
-                                <h:inputText label="Mobile Number"
+                                No Telepon / HP :<h:inputText label="HP"
 					                       id="mobileno" value="#{employeeBean.mobileNumber}" 
 					                       required="true"
 					                       a:placeholder="No. Telepon">
@@ -95,14 +95,14 @@
 					            <h:message for="mobileno" style="color: red"/>
                             </div>
                             <div class="form-group">
-                                <h:inputText label="Email Address"
+                                Alamat Email :<h:inputText label="Email"
 			                       id="email" value="#{employeeBean.emailAddress}" required="true"
 			                       validator="#{employeeBean.validateEmail}"
 			                       a:placeholder="Email"/>
 					            <h:message for="email" style="color: red"/>
                             </div>
                             <div class="form-group ">
-                                <h:inputText label="Date of Birth"
+                                Tanggal Lahir (ex. 01-01-91) :<h:inputText label="Tgl Lahir"
 					                       id="tglsurvey" value="#{employeeBean.tglsurvey}" 
 					                       required="true"
 					                       a:placeholder="Tanggal Survey (mm-dd-yy)">
@@ -111,19 +111,19 @@
 					            <h:message for="tglsurvey" style="color: red"/>
                             </div>
                             <div class="form-group" style="padding-top:15px">
-                            	<h5>Apa Yang Kalian Sukai Tentang Kampus?</h5>
+                            	<h5>Apa Yang Menarik Anda Ingin Kuliah Di UNDIP?</h5>
                             	<h:selectManyCheckbox value="#{employeeBean.suka}">
-							         	<f:selectItem itemValue="siswa" itemLabel="siswa" />
-							   			<f:selectItem itemValue="lokasi" itemLabel="lokasi" />
-							   			<f:selectItem itemValue="kampus" itemLabel="kampus" />
-							   			<f:selectItem itemValue="suasana" itemLabel="suasana" />
-							   			<f:selectItem itemValue="kamar asrama" itemLabel="kamar asrama" />
-							   			<f:selectItem itemValue="olahraga" itemLabel="olahraga" />
+							         	<f:selectItem itemValue="siswa" itemLabel="Teman" />
+							   			<f:selectItem itemValue="lokasi" itemLabel="Nyaman" />
+							   			<f:selectItem itemValue="kampus" itemLabel="Mewah" />
+							   			<f:selectItem itemValue="suasana" itemLabel="Kelengkapan" />
+							   			<f:selectItem itemValue="kamar asrama" itemLabel="Budaya" />
+							   			<f:selectItem itemValue="olahraga" itemLabel="Keluarga" />
 						        </h:selectManyCheckbox>
                             </div>
                             
                             <div class="form-group" style="padding-top:15px">
-                            	<h5>Bagaimana Tertarik Dengan Undip?</h5>
+                            	<h5>Darimana Mengetahui Undip?</h5>
                             	<h:selectOneRadio label="fasilitas" 
 					                id="fasilitas" value="#{employeeBean.fasilitas}" >
 						            <f:selectItem itemLabel="Teman" itemValue="Teman" />
@@ -134,17 +134,17 @@
                             </div>
                             
                             <div class="form-group">
-                                <h:selectOneMenu label="rekomendasi" value="#{employeeBean.rekomendasi}">
+                                Seberapa senangkah anda di UNDIP ?<h:selectOneMenu label="Ketertarikan" value="#{employeeBean.rekomendasi}">
 					                					                
 					                <f:selectItem itemLabel="--Choose--" itemValue=" " />
-						            <f:selectItem itemLabel="Sangat Mungkin" itemValue="Sangat Mungkin" />
-						            <f:selectItem itemLabel="Mungkin" itemValue="Mungkin" />
-						            <f:selectItem itemLabel="Tidak Mungkin" itemValue="Tidak Mungkin" />
+						            <f:selectItem itemLabel="Sangat Mungkin" itemValue="Sangat Senang" />
+						            <f:selectItem itemLabel="Mungkin" itemValue="Senang" />
+						            <f:selectItem itemLabel="Tidak Mungkin" itemValue="Tidak Senang" />
 						            
 					            </h:selectOneMenu> 
                             </div>
                             <div class="form-group">
-                                <h:inputTextarea value="#{employeeBean.komentar}" a:placeholder="Komentar Tambahan"/>
+                                Komentar Anda<h:inputTextarea value="#{employeeBean.komentar}" a:placeholder="Komentar"/>
                             </div>
                             <center>
                             <div class="form-group form-button">

@@ -5,7 +5,7 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
     <h:head>
-        <title>Survei Siswa</title>
+        <title>Hasil Form</title>
         <h:outputStylesheet name="assets/css/style.css" />
         <style>
         	select,textarea {
@@ -28,62 +28,62 @@
                 <div class="signup-content" style="justify-content:center">
                     <div class="signup-form">
                         <center>
-                        <h2 class="form-title">Data Berhasil Disimpan</h2>
+                        <h2 class="form-title">Data Berhasil Disimpan, Terimakasih!</h2>
                         <table>
                             <tr>
-                                <td>Nama Depan:</td>
+                                <td>Nama Lengkap :</td>
                                 <td><h:outputText value="#{employeeBean.namaDepan}" /></td>
                             </tr>
                             <tr>
-                                   <td>Nama Belakang:</td>
+                                   <td>Nama Panggilan :</td>
                                 <td><h:outputText value="#{employeeBean.namaBelakang}" /></td>
                             </tr>
                             <tr>
-                                 <td>Alamat Jalan:</td>
+                                 <td>Alamat Tempat Tinggal :</td>
                                 <td><h:outputText value="#{employeeBean.address}" /></td>
                             </tr>
                             <tr>
-                                 <td>Kota:</td>
+                                 <td>Kota / Kabupaten :</td>
                                 <td><h:outputText value="#{employeeBean.kota}" /></td>
                             </tr>
                             <tr>
-                                <td>Negara Bagian:</td>
+                                <td>Provinsi :</td>
                                 <td><h:outputText value="#{employeeBean.negara}" /></td>
                             </tr>
                             <tr>
-                                <td>Pos:</td>
+                                <td>Kode Pos :</td>
                                 <td><h:outputText value="#{employeeBean.pos}" /></td>
                             </tr>
                             <tr>
-                                <td>No Telepon:</td>
+                                <td>No Telepon / HP :</td>
                                 <td><h:outputText value="#{employeeBean.mobileNumber}" /></td>
                             </tr>
                             <tr>
-                                <td>Email Address:</td>
+                                <td>Alamat Email :</td>
                                 <td><h:outputText value="#{employeeBean.emailAddress}" /></td>
                             </tr>
                             
                             <tr>
-                                <td>Tanggal Survey:</td>
+                                <td>Tanggal Lahir :</td>
                                 <td><h:outputText value="#{employeeBean.tglsurvey}" /></td>
                             </tr>
                             <tr>
-                                <td>Apa Yang Kalian Sukai Tentang Kampus?:</td>
+                                <td>Yang Menarik Saya Ingin Kuliah Di UNDIP adalah:</td>
                                 <td><h:outputText value="#{employeeBean.sukaInString}" /></td>
                             </tr>
                                         <tr>
-                                <td>Bagaimana Tertarik Dengan Undip:</td>
+                                <td>Saya Mengetahui Undip Dari:</td>
                                 <td><h:outputText value="#{employeeBean.fasilitas}" /></td>
                             </tr>
                             
                                         <tr>
-                          <td>Apakah Kamu Ingin merekomendasikan??</td>
+                          <td>Seberapa senang saya di UNDIP?</td>
                                 <td><h:outputText value="#{employeeBean.rekomendasi}" /></td>
                             </tr>
                             
                             
                                         <tr>
-                                <td>Komentar Tambahan:</td>
+                                <td>Komentar Anda:</td>
                                 <td><h:outputText value="#{employeeBean.komentar}" /></td>
                             </tr>
                             <tr>
