@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>Survei Siswa</title>
+        <h:outputStylesheet name="assets/css/style.css" />
+        <style>
+        	select,textarea {
+        		width: 100%;
+			    display: block;
+			    border: none;
+			    border-bottom: 1px solid #999;
+			    padding: 6px 30px;
+			    font-family: Poppins;
+			    box-sizing: border-box;
+        	}
+        </style>
+    </h:head>
+    <h:body>
+    <div class="main">
+
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container" >
+                <div class="signup-content" style="justify-content:center">
+                    <div class="signup-form">
+                        <center>
+                        <h2 class="form-title">Survey Siswa</h2>
+                        <table>
+                            <tr>
+                                <td>Nama Depan:</td>
+                                <td><h:outputText value="#{employeeBean.namaDepan}" /></td>
+                            </tr>
+                            <tr>
+                                   <td>Nama Belakang:</td>
+                                <td><h:outputText value="#{employeeBean.namaBelakang}" /></td>
+                            </tr>
+                            <tr>
+                                 <td>Alamat Jalan:</td>
+                                <td><h:outputText value="#{employeeBean.address}" /></td>
+                            </tr>
+                            <tr>
+                                 <td>Kota:</td>
+                                <td><h:outputText value="#{employeeBean.kota}" /></td>
+                            </tr>
+                            <tr>
+                                <td>Negara Bagian:</td>
+                                <td><h:outputText value="#{employeeBean.negara}" /></td>
+                            </tr>
+                            <tr>
+                                <td>Pos:</td>
+                                <td><h:outputText value="#{employeeBean.pos}" /></td>
+                            </tr>
+                            <tr>
+                                <td>No Telepon:</td>
+                                <td><h:outputText value="#{employeeBean.mobileNumber}" /></td>
+                            </tr>
+                            <tr>
+                                <td>Email Address:</td>
+                                <td><h:outputText value="#{employeeBean.emailAddress}" /></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Tanggal Survey:</td>
+                                <td><h:outputText value="#{employeeBean.tglsurvey}" /></td>
+                            </tr>
+                            <tr>
+                                <td>Apa Yang Kalian Sukai Tentang Kampus?:</td>
+                                <td><h:outputText value="#{employeeBean.sukaInString}" /></td>
+                            </tr>
+                                        <tr>
+                                <td>Bagaimana Tertarik Dengan Undip:</td>
+                                <td><h:outputText value="#{employeeBean.fasilitas}" /></td>
+                            </tr>
+                            
+                                        <tr>
+                          <td>Apakah Kamu Ingin merekomendasikan??</td>
+                                <td><h:outputText value="#{employeeBean.rekomendasi}" /></td>
+                            </tr>
+                            
+                            
+                                        <tr>
+                                <td>Komentar Tambahan:</td>
+                                <td><h:outputText value="#{employeeBean.komentar}" /></td>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </table>
+						<h:form>
+							<div>
+								<h:commandButton value="Cancel" action="index" class="form-submit"/>
+							</div>
+							<div>
+								<h:commandButton value="Submit" action="success" class="form-submit"/>
+							</div>
+                        	
+                        </h:form>
+                        </center>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <h:outputScript name="assets/vendor/jquery/jquery.min.js" />
+    <h:outputScript name="assets/main.js" />
+    </h:body>
+</html>

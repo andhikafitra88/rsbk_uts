@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>Survei Siswa</title>
+        <h:outputStylesheet name="assets/css/style.css" />
+        <h:outputStylesheet name="assets/css/bootstrap.min.css" />
+        <style>
+        	select,textarea,radio {
+        		width: 100%;
+			    display: block;
+			    border: none;
+			    border-bottom: 1px solid #999;
+			    padding: 6px 30px;
+			    font-family: Poppins;
+			    box-sizing: border-box;
+        	}
+        	.form-group label {
+        		position: unset;
+        	}
+        	
+        	tr, td {
+			  padding: 15px;
+			}
+			td label {
+				margin-top:10px;
+			}
+        	input[type=checkbox]:not(old) {
+        		display: block !important;
+        	}
+        </style>
+    </h:head>
+    <h:body>
+    <div class="main">
+
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content" style="justify-content: center">
+                    <div class="signup-form">
+                        <center>
+                        <h2 class="form-title">Survey Siswa</h2>
+                        </center>
+                        <h:form>
+                            <div class="form-group">
+                                <h:inputText label="NamaDepan" 
+                       id="NamaDepan" value="#{employeeBean.namaDepan}" 
+                       required="true" a:placeholder="Nama Depan"/>
+                         <h:message for="NamaDepan" style="color: red"/>
+                            </div>
+                            <div class="form-group">
+                                <h:inputText label="NamaBelakang" 
+			                       id="NamaBelakang" value="#{employeeBean.namaBelakang}" 
+			                       required="true"
+			                       a:placeholder="Nama Belakang"/>
+			                    <h:message for="NamaBelakang" style="color: red"/>
+                            </div>
+                            <div class="form-group">
+                                <h:inputText label="Address"
+			                       id="address" value="#{employeeBean.address}"
+			                       required="true"
+			                       a:placeholder="Alamat"/>
+					            <h:message for="address" style="color: red"/>
+                            </div>
+                            <div class="form-group">
+                                <h:inputText label="Kota" 
+			                       id="Kota" value="#{employeeBean.kota}" 
+			                       required="true"
+			                       a:placeholder="Kota"/>
+		                       <h:message for="Kota" style="color: red"/>
+                            </div>
+                            <div class="form-group">
+                                <h:inputText label="Negara" 
+			                       id="Negara" value="#{employeeBean.negara}" 
+			                       required="true"
+			                       a:placeholder="Negara"/>
+			                    <h:message for="Negara" style="color: red"/>
+                            </div>
+                            <div class="form-group">
+                                <h:inputText label="Pos" 
+			                       id="Pos" type="number" value="#{employeeBean.pos}" 
+			                       required="true"
+			                       a:placeholder="Kode Pos"/>
+			                    <h:message for="Pos" style="color: red"/>
+                            </div>
+                            <div class="form-group">
+                                <h:inputText label="Mobile Number"
+					                       id="mobileno" value="#{employeeBean.mobileNumber}" 
+					                       required="true"
+					                       a:placeholder="No. Telepon">
+					            </h:inputText>
+					            <h:message for="mobileno" style="color: red"/>
+                            </div>
+                            <div class="form-group">
+                                <h:inputText label="Email Address"
+			                       id="email" value="#{employeeBean.emailAddress}" required="true"
+			                       validator="#{employeeBean.validateEmail}"
+			                       a:placeholder="Email"/>
+					            <h:message for="email" style="color: red"/>
+                            </div>
+                            <div class="form-group ">
+                                <h:inputText label="Date of Birth"
+					                       id="tglsurvey" value="#{employeeBean.tglsurvey}" 
+					                       required="true"
+					                       a:placeholder="Tanggal Survey (mm-dd-yy)">
+					            <f:convertDateTime pattern="MM-dd-yy" />
+					            </h:inputText>
+					            <h:message for="tglsurvey" style="color: red"/>
+                            </div>
+                            <div class="form-group" style="padding-top:15px">
+                            	<h5>Apa Yang Kalian Sukai Tentang Kampus?</h5>
+                            	<h:selectManyCheckbox value="#{employeeBean.suka}">
+							         	<f:selectItem itemValue="siswa" itemLabel="siswa" />
+							   			<f:selectItem itemValue="lokasi" itemLabel="lokasi" />
+							   			<f:selectItem itemValue="kampus" itemLabel="kampus" />
+							   			<f:selectItem itemValue="suasana" itemLabel="suasana" />
+							   			<f:selectItem itemValue="kamar asrama" itemLabel="kamar asrama" />
+							   			<f:selectItem itemValue="olahraga" itemLabel="olahraga" />
+						        </h:selectManyCheckbox>
+                            </div>
+                            
+                            <div class="form-group" style="padding-top:15px">
+                            	<h5>Bagaimana Tertarik Dengan Undip?</h5>
+                            	<h:selectOneRadio label="fasilitas" 
+					                id="fasilitas" value="#{employeeBean.fasilitas}" >
+						            <f:selectItem itemLabel="Teman" itemValue="Teman" />
+						            <f:selectItem itemLabel="Televisi" itemValue="Televisi" />
+						            <f:selectItem itemLabel="Internet" itemValue="Internet" />
+						               <f:selectItem itemLabel="Lainnya" itemValue="Lainnya" />
+						        </h:selectOneRadio>
+                            </div>
+                            
+                            <div class="form-group">
+                                <h:selectOneMenu label="rekomendasi" value="#{employeeBean.rekomendasi}">
+					                					                
+					                <f:selectItem itemLabel="--Choose--" itemValue=" " />
+						            <f:selectItem itemLabel="Sangat Mungkin" itemValue="Sangat Mungkin" />
+						            <f:selectItem itemLabel="Mungkin" itemValue="Mungkin" />
+						            <f:selectItem itemLabel="Tidak Mungkin" itemValue="Tidak Mungkin" />
+						            
+					            </h:selectOneMenu> 
+                            </div>
+                            <div class="form-group">
+                                <h:inputTextarea value="#{employeeBean.komentar}" a:placeholder="Komentar Tambahan"/>
+                            </div>
+                            <center>
+                            <div class="form-group form-button">
+                            	<h:commandButton value="Submit" action="confirm" class="form-submit"/>
+                            </div>
+                            </center>
+                        </h:form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <h:outputScript name="assets/vendor/jquery/jquery.min.js" />
+    <h:outputScript name="assets/bootstrap.min.js" />
+    <h:outputScript name="assets/main.js" />
+    </h:body>
+</html>
+
